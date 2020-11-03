@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home: Text('Hey Komolika'),
-));
+  home: Scaffold(
+    appBar: AppBar(
+      title: Text('My First App'),
+    )
+    ,),
+)); 
