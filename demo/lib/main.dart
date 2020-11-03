@@ -4,7 +4,8 @@ void main() => runApp(MaterialApp(
   home: Scaffold(
     appBar: AppBar(
       title: Text('My First App'),
-      centerTitle: true,
-    )
-    ,),
+      centerTitle: true ,
+    ),
+    body: Text('Hey Komolika'),
+    ),
 )); 
