@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home: Scaffold(
+  home: Home()
+)); 
+
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
     appBar: AppBar( 
       title: Text('My First App'),
       centerTitle: true ,
@@ -22,7 +29,8 @@ void main() => runApp(MaterialApp(
    floatingActionButton: FloatingActionButton(
      onPressed: () {},
      backgroundColor: Colors.red[600],
-     child: Text('click')  
+     child: Text('click me ')  
      ),
-    ),
-)); 
+    );
+  }
+}
