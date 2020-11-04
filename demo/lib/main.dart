@@ -11,7 +11,8 @@ void main() => runApp(MaterialApp(
         child: Text('Hey Komolika'),
    ),
    floatingActionButton: FloatingActionButton(
-     child: Text('click')
-     ,),
+     onPressed: () {},
+     child: Text('click')  
+     ),
     ),
 )); 
