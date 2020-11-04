@@ -15,16 +15,9 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.red[600],
     ),
     body: Center(
-        child: Text(
-          'Hey Komolika',
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
-            color: Colors.grey[600],
-            fontFamily: 'IndieFlower'
-          ),
-        ),
+        child: Image(
+          image: NetworkImage('https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'),
+        )
    ),
    floatingActionButton: FloatingActionButton(
      onPressed: () {},
