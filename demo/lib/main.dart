@@ -1,46 +1,86 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home: Home()
+  home:NinjaCard()
 )); 
 
-
-class Home extends StatelessWidget {
+class NinjaCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar( 
-      title: Text('My First App'),
-      centerTitle: true ,
-      backgroundColor: Colors.red[600],
-    ),
-    body: Row(
-      children: <Widget>[
-        Expanded(
-                  child: Container(
-            padding: EdgeInsets.all(30),
-            color: Colors.cyan,
-            child: Text('1'),
-          ),
+      backgroundColor: Colors.blue[300],
+      appBar: AppBar(
+        title: Text('Nija Id Card'),
+        centerTitle: true,
+        backgroundColor: Colors.blue[500],
+        elevation: 0.0,
+      ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/kammu.jpg'),
+                radius: 40,
+              ),
+            ),
+            Text(
+              'NAME',
+              style: TextStyle(
+                color: Colors.black87,
+                letterSpacing: 2.0
+              )
+            ),
+            SizedBox(height: 10), 
+            Text(
+              'Komolika',
+              style: TextStyle(
+                color: Colors.black87,
+                letterSpacing: 1.0,
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold
+              )
+            ),
+             Text(
+              'Current Level',
+              style: TextStyle(
+                color: Colors.black87,
+                letterSpacing: 2.0
+              )
+            ),
+            SizedBox(height: 10), 
+            Text(
+              '8',
+              style: TextStyle(
+                color: Colors.black87,
+                letterSpacing: 1.0,
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold
+              )
+            ),
+            SizedBox(height:30),
+            Row(
+              children: <Widget>[
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(width:10),
+                Text(
+                  'komal@gmail.com',
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    fontSize: 18,
+                    letterSpacing: 1,
+                  ),
+                ),
+              ],
+            )
+          ],
         ),
-        Container(
-          padding: EdgeInsets.all(30),
-          color: Colors.pink,
-          child: Text('2'),
-        ),
-        Container(
-          padding: EdgeInsets.all(30),
-          color: Colors.amber,
-          child: Text('3'),
-        ),
-      ],
-    ),
-
-   floatingActionButton: FloatingActionButton(
-     onPressed: () {},
-     backgroundColor: Colors.red[600],
-     child: Text('click me ')  
-     ),
+      ),
     );
   }
 }
